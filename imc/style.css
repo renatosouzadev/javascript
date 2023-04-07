@@ -8,13 +8,6 @@
 h2{
     margin-bottom: 7px;
 }
-span.um{
-    font-size: .5em;
-    font-weight: 600;
-}
-span.doispontos{
-    font-weight: 600;
-}
 h1{
     margin-bottom: 20px;
 }
@@ -45,5 +38,13 @@ form input[type="number"]{
 form input[type="number"]:hover,
 form input[type="number"]:focus{
     border: none;
+    outline: none;
+}
+span.um{
+    font-size: .5em;
+    font-weight: 600;
+}
+span.doispontos{
+    font-weight: 600;
 }
 
