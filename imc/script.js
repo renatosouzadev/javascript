@@ -1,6 +1,9 @@
 function calcular(){
-    let altura = Number(document.getElementById("altura"))
-    if(String(altura).Value.lengh = 0){
-        Window.alert('Erro')
-    }
+    const altura = document.getElementById("altura").value;
+    const peso = document.getElementById("peso")
+
+    if(isNaN(altura) || altura < 1){
+        alert("verifique os dados e tente novamente");
+    };
+    return;
 }
