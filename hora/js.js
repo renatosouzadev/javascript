@@ -1,19 +1,25 @@
 function relogio() {
     setInterval(() => {
+      //obtem data e hora do sistema
       const agora = new Date();
+
+      //listas de dias e meses
       const diasSemana = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
       const meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
   
+      //define e formata partes da data e hora
       const diaSemana = diasSemana[agora.getDay()];
       const mes = meses[agora.getMonth()];
       const hora = agora.getHours();
       const min = agora.getMinutes().toString().padStart(2, '0');
       const seg = agora.getSeconds().toString().padStart(2, '0');
 
+      //declara s variaveis usadas a sequir
       let bdtn;
       let imagem;
       let corDeFundo;
   
+      //define partes da resposta
       if (hora < 5) {
         bdtn = 'deveria estar dormindo';
         imagem = 'madruga.png';
@@ -36,10 +42,12 @@ function relogio() {
         corDeFundo = '#14221b';
       }
   
+      //manipula p DOM
       document.getElementById('data').innerHTML = `Hoje é ${diaSemana}, ${agora.getDate()} de ${mes} de ${agora.getFullYear()}`;
       document.getElementById('hora').innerHTML = `e são exatamente ${hora}:${min}:${seg}, ${bdtn}`;
       document.getElementById('img').src = imagem;
       document.body.style.background = corDeFundo;
+
     }, 100);
   }
   
